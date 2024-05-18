@@ -11,14 +11,14 @@ import static ru.atlasOk.consts.Consts.BASE_URL;
 
 public class BaseTest {
     ChromeDriver driver;
+    public BasePage site;
 
     @BeforeEach
     public void setUp() {
         System.out.println("driver open");
         driver = new ChromeDriver();
         Atlas atlas = new Atlas(new WebDriverConfiguration(driver, BASE_URL));
-        BasePage site = atlas.create(driver, BasePage.class);
-        site.mainPage().open();
+        site = atlas.create(driver, BasePage.class);
     }
 
     @AfterEach
