@@ -14,12 +14,6 @@ import static ru.yandex.qatools.matchers.webdriver.TextMatcher.text;
 @DisplayName("Notes in profile")
 public class NotesTest extends BaseTestWithLogin {
 
-    @BeforeEach
-    @Override
-    public void setUp() {
-        super.setUp();
-    }
-
     @DisplayName("Creating and deleting posts")
     @Test
     public void manageTextPosts() {

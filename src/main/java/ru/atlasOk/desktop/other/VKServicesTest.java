@@ -17,6 +17,7 @@ public class VKServicesTest extends BaseTestWithLogin {
         super.setUp();
     }
 
+    @DisplayName("Check if service names are displayed")
     @Test
     public void seeServiceNames() {
         site.onMainPage().navigationBar().buttonLabel(VK_SERVICES).waitUntil(displayed()).click();
@@ -24,5 +25,4 @@ public class VKServicesTest extends BaseTestWithLogin {
             service.name().should(displayed());
         });
     }
-
 }

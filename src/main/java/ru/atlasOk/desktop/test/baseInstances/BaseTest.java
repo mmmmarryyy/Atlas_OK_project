@@ -23,6 +23,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         Atlas atlas = new Atlas(new WebDriverConfiguration(driver, BASE_URL));
         site = atlas.create(driver, BasePage.class);
+        site.onLoginPage().open();
     }
 
     @AfterEach
