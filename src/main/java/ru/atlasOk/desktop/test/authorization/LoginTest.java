@@ -1,6 +1,7 @@
 package ru.atlasOk.desktop.test.authorization;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.atlasOk.desktop.test.baseInstances.BaseTest;
 
@@ -20,6 +21,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Check can login with correct data")
     public void testCheckLogin() {
         site.onLoginPage().usernameField().waitUntil(displayed()).sendKeys(USERNAME);
         site.onLoginPage().passwordField().waitUntil(displayed()).sendKeys(PASSWORD);
