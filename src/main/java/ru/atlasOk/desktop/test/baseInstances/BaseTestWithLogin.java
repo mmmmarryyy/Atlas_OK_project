@@ -9,11 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import ru.atlasOk.desktop.pages.baseInstances.BasePage;
 
 import static ru.atlasOk.consts.Consts.*;
-import static ru.atlasOk.desktop.test.authorization.LoginTest.EXPECTED_USERNAME;
 import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
-import static ru.yandex.qatools.matchers.webdriver.TextMatcher.text;
 
-public class BaseTest {
+public class BaseTestWithLogin {
     ChromeDriver driver;
     public BasePage site;
 
@@ -23,6 +21,10 @@ public class BaseTest {
         driver = new ChromeDriver();
         Atlas atlas = new Atlas(new WebDriverConfiguration(driver, BASE_URL));
         site = atlas.create(driver, BasePage.class);
+        site.onLoginPage().open();
+        site.onLoginPage().usernameField().waitUntil(displayed()).sendKeys(USERNAME);
+        site.onLoginPage().passwordField().waitUntil(displayed()).sendKeys(PASSWORD);
+        site.onLoginPage().loginButton().waitUntil(displayed()).click();
     }
 
     @AfterEach

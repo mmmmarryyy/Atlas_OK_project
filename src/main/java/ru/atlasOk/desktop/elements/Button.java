@@ -13,4 +13,8 @@ public interface Button extends AtlasWebElement {
     @Name("Button by exact text {{ value }}")
     @FindBy(".//button[. = '{{ value }}']")
     AtlasWebElement buttonText(@Param("value") String value);
+
+    @Name("Button by aria-label {{ value }}")
+    @FindBy(".//button[@aria-label = '{{ value }}']")
+    AtlasWebElement buttonLabel(@Param("value") String value);
 }
