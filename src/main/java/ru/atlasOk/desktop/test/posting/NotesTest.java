@@ -21,7 +21,7 @@ public class NotesTest extends BaseTestWithLogin {
         site.onNotesPage().postingMenu().textBox().waitUntil(displayed()).sendKeys(USERNAME);
         site.onNotesPage().postingMenu().submitPost().click();
 
-        site.onNotesPage().posts().get(FIRST).text().should(text(USERNAME));
+        site.onNotesPage().posts().get(0).text().should(text(USERNAME));
     }
 
     @Override

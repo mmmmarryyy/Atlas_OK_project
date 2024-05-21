@@ -10,7 +10,7 @@ import static ru.atlasOk.consts.Consts.USERNAME;
 import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
 import static ru.yandex.qatools.matchers.webdriver.TextMatcher.text;
 
-@DisplayName("Authorization")
+@DisplayName("Unsuccessful authorization")
 public class LoginWithWrongParamsTest extends BaseTest {
     private static final String errorMessage = "Неправильно указан логин и/или пароль";
     private static final String usernameErrorMessage = "Введите логин";

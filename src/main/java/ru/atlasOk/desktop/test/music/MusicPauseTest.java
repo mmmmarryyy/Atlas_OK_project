@@ -4,7 +4,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.atlasOk.desktop.test.baseInstances.BaseTestWithLogin;
 
-import static ru.atlasOk.consts.Consts.FIRST;
 import static ru.atlasOk.desktop.elements.NavigationBar.MUSIC;
 import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
 
@@ -17,7 +16,7 @@ public class MusicPauseTest extends BaseTestWithLogin {
         site.onMainPage().navigationBar().buttonLabel(MUSIC).waitUntil(displayed()).click();
         site.onMainPage().musicPopup().waitUntil(displayed());
         site.onMainPage().musicPopup().musicPlayer().nonActivePlayIcon().waitUntil(displayed());
-        site.onMainPage().musicPopup().musicContainer().track().get(FIRST).waitUntil(displayed()).click();
+        site.onMainPage().musicPopup().musicContainer().track().get(0).waitUntil(displayed()).click();
         site.onMainPage().musicPopup().musicPlayer().activePlayIcon().waitUntil(displayed()).click();
 
         site.onMainPage().musicPopup().musicPlayer().nonActivePlayIcon().should(displayed());
