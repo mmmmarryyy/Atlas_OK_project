@@ -4,6 +4,7 @@ import io.qameta.atlas.webdriver.AtlasWebElement;
 import io.qameta.atlas.webdriver.WebPage;
 import io.qameta.atlas.webdriver.extension.FindBy;
 import io.qameta.atlas.webdriver.extension.Name;
+import ru.atlasOk.desktop.elements.MusicPopup;
 import ru.atlasOk.desktop.elements.NavigationBar;
 import ru.atlasOk.desktop.elements.VKServicePopup;
 
@@ -51,4 +52,8 @@ public interface MainPage extends WebPage {
     @Name("Friends page button")
     @FindBy(".//*[@data-l='t,userFriend']")
     AtlasWebElement friendsButton();
+
+    @Name("Music popup")
+    @FindBy("//*[@id='music_layer']")
+    MusicPopup musicPopup();
 }
