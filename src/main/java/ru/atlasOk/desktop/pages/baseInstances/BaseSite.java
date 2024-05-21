@@ -7,7 +7,7 @@ import ru.atlasOk.desktop.pages.MainPage;
 import ru.atlasOk.desktop.pages.NotesPage;
 import ru.atlasOk.desktop.pages.UserPage;
 
-public interface BasePage extends WebSite {
+public interface BaseSite extends WebSite {
     @Page
     LoginPage onLoginPage();
 

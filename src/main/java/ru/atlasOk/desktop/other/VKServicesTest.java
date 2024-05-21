@@ -8,7 +8,7 @@ import ru.atlasOk.desktop.test.baseInstances.BaseTestWithLogin;
 import static ru.atlasOk.desktop.elements.NavigationBar.VK_SERVICES;
 import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
 
-@DisplayName("Попап сервисов вк")
+@DisplayName("VK services popup")
 public class VKServicesTest extends BaseTestWithLogin {
 
     @DisplayName("Check if service names are displayed")
