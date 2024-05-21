@@ -11,12 +11,6 @@ import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
 @DisplayName("Попап сервисов вк")
 public class VKServicesTest extends BaseTestWithLogin {
 
-    @BeforeEach
-    @Override
-    public void setUp() {
-        super.setUp();
-    }
-
     @DisplayName("Check if service names are displayed")
     @Test
     public void seeServiceNames() {
