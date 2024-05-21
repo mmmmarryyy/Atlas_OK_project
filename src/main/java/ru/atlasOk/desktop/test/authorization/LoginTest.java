@@ -9,7 +9,7 @@ import static ru.atlasOk.consts.Consts.USERNAME;
 import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
 import static ru.yandex.qatools.matchers.webdriver.TextMatcher.text;
 
-@DisplayName("Authorization")
+@DisplayName("Successful authorization")
 public class LoginTest extends BaseTest {
     public static final String EXPECTED_USERNAME = USERNAME + " " + USERNAME;
 

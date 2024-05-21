@@ -5,6 +5,5 @@ import io.qameta.atlas.webdriver.extension.FindBy;
 import io.qameta.atlas.webdriver.extension.Name;
 
 public interface NavigationBar extends AtlasWebElement, Button {
-
     String VK_SERVICES = "Сервисы VK";
 }

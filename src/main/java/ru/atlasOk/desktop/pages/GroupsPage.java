@@ -5,6 +5,7 @@ import io.qameta.atlas.webdriver.ElementsCollection;
 import io.qameta.atlas.webdriver.WebPage;
 import io.qameta.atlas.webdriver.extension.FindBy;
 import io.qameta.atlas.webdriver.extension.Name;
+import ru.atlasOk.desktop.elements.Group;
 
 public interface GroupsPage extends WebPage {
     @Name("Input field to enter group name")
@@ -17,9 +18,5 @@ public interface GroupsPage extends WebPage {
 
     @Name("Groups in search query result")
     @FindBy(".//*[contains(@class,'group-big-card') and contains(@class,'ucard-v')]")
-    ElementsCollection<AtlasWebElement> groups();
-
-    @Name("Message confirms that you join group")
-    @FindBy(".//*[contains(@class,'label__gp7y9')]")
-    AtlasWebElement confirmationMessage();
+    ElementsCollection<Group> groups();
 }

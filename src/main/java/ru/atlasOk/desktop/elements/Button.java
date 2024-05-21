@@ -6,10 +6,10 @@ import io.qameta.atlas.webdriver.extension.Name;
 import io.qameta.atlas.webdriver.extension.Param;
 
 public interface Button extends AtlasWebElement {
-
     @Name("Button with text {{ value }}")
     @FindBy(".//button[contains(., '{{ value }}')]")
     AtlasWebElement button(@Param("value") String value);
+
     @Name("Button by exact text {{ value }}")
     @FindBy(".//button[. = '{{ value }}']")
     AtlasWebElement buttonText(@Param("value") String value);
