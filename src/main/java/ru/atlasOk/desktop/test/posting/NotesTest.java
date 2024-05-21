@@ -20,17 +20,20 @@ public class NotesTest extends BaseTestWithLogin {
         site.onNotesPage().posting().waitUntil(displayed()).click();
         site.onNotesPage().postingMenu().textBox().waitUntil(displayed()).sendKeys(USERNAME);
         site.onNotesPage().postingMenu().submitPost().click();
+
         site.onNotesPage().posts().get(FIRST).text().should(text(USERNAME));
     }
 
     @Override
     @AfterEach
-    public void tearDown(){
+    public void tearDown() {
         site.onNotesPage().open(BASE_URL + PROFILE_URL + ID_URL + STATUSES_URL);
         site.onNotesPage().actions().waitUntil(displayed()).click();
         site.onNotesPage().delete().waitUntil(displayed()).click();
         site.onNotesPage().open(BASE_URL + PROFILE_URL + ID_URL + STATUSES_URL);
+
         site.onNotesPage().divText(EMPTY_POSTS_TEXT).should(displayed());
+
         super.tearDown();
     }
 }

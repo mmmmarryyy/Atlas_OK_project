@@ -9,7 +9,6 @@ public class Consts {
     public static final String STATUSES_URL = "/statuses";
     public static final String PROFILE_URL = "/profile";
     public static final String ABOUT_URL = "/about";
+
     public static final int FIRST = 0;
-    public static final int SECOND = 1;
-    public static final int THIRD = 2;
 }

@@ -18,8 +18,7 @@ public class MusicPauseTest extends BaseTestWithLogin {
         site.onMainPage().musicPopup().waitUntil(displayed());
         site.onMainPage().musicPopup().musicPlayer().nonActivePlayIcon().waitUntil(displayed());
         site.onMainPage().musicPopup().musicContainer().track().get(FIRST).waitUntil(displayed()).click();
-        site.onMainPage().musicPopup().musicPlayer().activePlayIcon().waitUntil(displayed());
-        site.onMainPage().musicPopup().musicPlayer().activePlayIcon().click();
+        site.onMainPage().musicPopup().musicPlayer().activePlayIcon().waitUntil(displayed()).click();
 
         site.onMainPage().musicPopup().musicPlayer().nonActivePlayIcon().should(displayed());
     }
