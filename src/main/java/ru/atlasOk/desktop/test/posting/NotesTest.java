@@ -1,9 +1,7 @@
 package ru.atlasOk.desktop.test.posting;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.atlasOk.desktop.test.baseInstances.BaseTest;
 import ru.atlasOk.desktop.test.baseInstances.BaseTestWithLogin;
 
 import static ru.atlasOk.consts.Consts.*;
