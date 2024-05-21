@@ -5,7 +5,7 @@ import io.qameta.atlas.webdriver.WebDriverConfiguration;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.chrome.ChromeDriver;
-import ru.atlasOk.desktop.pages.baseInstances.BaseSite;
+import ru.atlasOk.desktop.site.BaseSite;
 
 import static ru.atlasOk.consts.Consts.BASE_URL;
 import static ru.atlasOk.consts.Consts.USERNAME;
