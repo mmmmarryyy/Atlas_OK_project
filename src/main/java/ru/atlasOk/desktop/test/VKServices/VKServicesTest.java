@@ -1,6 +1,5 @@
-package ru.atlasOk.desktop.other;
+package ru.atlasOk.desktop.test.VKServices;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.atlasOk.desktop.test.baseInstances.BaseTestWithLogin;
