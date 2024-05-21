@@ -1,6 +1,5 @@
 package ru.atlasOk.desktop.test.baseInstances;
 
-import io.qameta.allure.Step;
 import io.qameta.atlas.core.Atlas;
 import io.qameta.atlas.webdriver.WebDriverConfiguration;
 import org.junit.jupiter.api.AfterEach;
@@ -17,7 +16,6 @@ public class BaseTestWithLogin {
     ChromeDriver driver;
     public BaseSite site;
 
-    @Step("Opening driver...")
     @BeforeEach
     public void setUp() {
         driver = new ChromeDriver();
@@ -29,7 +27,6 @@ public class BaseTestWithLogin {
         site.onLoginPage().loginButton().waitUntil(displayed()).click();
     }
 
-    @Step("Closing Webdriver...")
     @AfterEach
     public void tearDown() {
         driver.close();
