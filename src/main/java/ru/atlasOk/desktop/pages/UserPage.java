@@ -4,6 +4,7 @@ import io.qameta.atlas.webdriver.AtlasWebElement;
 import io.qameta.atlas.webdriver.WebPage;
 import io.qameta.atlas.webdriver.extension.FindBy;
 import io.qameta.atlas.webdriver.extension.Name;
+import ru.atlasOk.desktop.elements.SelfInfoSection;
 
 public interface UserPage extends WebPage {
     @Name("Button to remove friend request")
