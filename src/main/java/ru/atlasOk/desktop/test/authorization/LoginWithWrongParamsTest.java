@@ -1,6 +1,5 @@
 package ru.atlasOk.desktop.test.authorization;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
@@ -11,6 +10,7 @@ import static ru.atlasOk.consts.Consts.USERNAME;
 import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
 import static ru.yandex.qatools.matchers.webdriver.TextMatcher.text;
 
+@DisplayName("Authorization")
 public class LoginWithWrongParamsTest extends BaseTest {
     private static final String errorMessage = "Неправильно указан логин и/или пароль";
     private static final String usernameErrorMessage = "Введите логин";
@@ -44,13 +44,6 @@ public class LoginWithWrongParamsTest extends BaseTest {
         public String getExpectedErrorMessage() {
             return expectedErrorMessage;
         }
-    }
-
-    @BeforeEach
-    @Override
-    public void setUp() {
-        super.setUp();
-        site.onLoginPage().open();
     }
 
     @ParameterizedTest(name = "{index} - test case: {0}")

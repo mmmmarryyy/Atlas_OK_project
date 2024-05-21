@@ -14,7 +14,6 @@ import static ru.yandex.qatools.matchers.webdriver.TextMatcher.text;
 public class LoginTest extends BaseTest {
     public static final String EXPECTED_USERNAME = USERNAME + " " + USERNAME;
 
-    @DisplayName("Authorization check")
     @Test
     @DisplayName("Check can login with correct data")
     public void testCheckLogin() {

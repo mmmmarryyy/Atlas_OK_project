@@ -1,30 +1,18 @@
 package ru.atlasOk.desktop.test.friends;
 
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import ru.atlasOk.desktop.test.baseInstances.BaseTest;
+import ru.atlasOk.desktop.test.baseInstances.BaseTestWithLogin;
 
-import static ru.atlasOk.consts.Consts.PASSWORD;
-import static ru.atlasOk.consts.Consts.USERNAME;
 import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
 
-public class AddFriendTest extends BaseTest {
+@DisplayName("Friends")
+public class AddFriendTest extends BaseTestWithLogin {
     public static final String FRIEND_USERNAME = "technopol70 technopol70";
     public static final String EXPECTED_CONFIRMATION_MESSAGE = "Запрос отправлен";
-
-    @BeforeEach
-    @Override
-    public void setUp() {
-        super.setUp();
-        site.onLoginPage().open();
-        site.onLoginPage().usernameField().waitUntil(displayed()).sendKeys(USERNAME);
-        site.onLoginPage().passwordField().waitUntil(displayed()).sendKeys(PASSWORD);
-        site.onLoginPage().loginButton().waitUntil(displayed()).click();
-    }
 
     @Test
     @DisplayName("Check can add group")

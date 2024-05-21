@@ -6,28 +6,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
-import ru.atlasOk.desktop.test.baseInstances.BaseTest;
+import ru.atlasOk.desktop.test.baseInstances.BaseTestWithLogin;
 
-import java.awt.event.MouseEvent;
-
-import static ru.atlasOk.consts.Consts.PASSWORD;
-import static ru.atlasOk.consts.Consts.USERNAME;
 import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
 import static ru.yandex.qatools.matchers.webdriver.TextMatcher.text;
 
-public class AddGroupTest extends BaseTest {
+@DisplayName("Groups")
+public class AddGroupTest extends BaseTestWithLogin {
     public static final String EXPECTED_CONFIRMATION_MESSAGE = "Вы в группе";
-
-    @BeforeEach
-    @Override
-    public void setUp() {
-        super.setUp();
-        site.onLoginPage().open();
-        site.onLoginPage().usernameField().waitUntil(displayed()).sendKeys(USERNAME);
-        site.onLoginPage().passwordField().waitUntil(displayed()).sendKeys(PASSWORD);
-        site.onLoginPage().loginButton().waitUntil(displayed()).click();
-    }
 
     @Test
     @DisplayName("Check can add group")
