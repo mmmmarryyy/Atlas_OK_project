@@ -10,16 +10,11 @@ import static ru.atlasOk.consts.Consts.USERNAME;
 import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
 import static ru.yandex.qatools.matchers.webdriver.TextMatcher.text;
 
+@DisplayName("Authorization")
 public class LoginTest extends BaseTest {
     public static final String EXPECTED_USERNAME = USERNAME + " " + USERNAME;
 
-    @BeforeEach
-    @Override
-    public void setUp() {
-        super.setUp();
-        site.onLoginPage().open();
-    }
-
+    @DisplayName("Authorization check")
     @Test
     @DisplayName("Check can login with correct data")
     public void testCheckLogin() {

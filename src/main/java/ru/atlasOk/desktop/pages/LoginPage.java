@@ -6,11 +6,11 @@ import io.qameta.atlas.webdriver.extension.FindBy;
 import io.qameta.atlas.webdriver.extension.Name;
 
 public interface LoginPage extends WebPage {
-    @Name("Field to enter login")
+    @Name("Email field")
     @FindBy(".//*[@id='field_email']")
     AtlasWebElement usernameField();
 
-    @Name("Field to enter username")
+    @Name("Password field")
     @FindBy(".//*[@id='field_password']")
     AtlasWebElement passwordField();
 

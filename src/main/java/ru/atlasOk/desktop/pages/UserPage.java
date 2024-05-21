@@ -14,4 +14,8 @@ public interface UserPage extends WebPage {
     @Name("Leave group confirm button")
     @FindBy(".//*[@aria-label='Отменить запрос']")
     AtlasWebElement removeFriendRequestConfirmButton();
+
+    @Name("Notes")
+    @FindBy(".//*[@data-l='t,userStatuses']")
+    AtlasWebElement notes();
 }
