@@ -14,10 +14,6 @@ public interface MainPage extends WebPage {
     @FindBy(".//*[@data-l='t,userPage']")
     AtlasWebElement userName();
 
-    @Name("User page navigator")
-    @FindBy(".//*[@data-l= 't,userPage' ]//div")
-    AtlasWebElement userPageNavigator();
-
     @Name("Navigation toolbar")
     @FindBy("//div[@data-l='t,navigationToolbar']")
     NavigationBar navigationBar();

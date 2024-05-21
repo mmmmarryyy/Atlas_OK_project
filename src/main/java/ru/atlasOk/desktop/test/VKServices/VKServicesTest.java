@@ -10,7 +10,7 @@ import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
 @DisplayName("VK services popup")
 public class VKServicesTest extends BaseTestWithLogin {
 
-    @DisplayName("Check if service names are displayed")
+    @DisplayName("Check if service names are being displayed")
     @Test
     public void seeServiceNames() {
         site.onMainPage().navigationBar().buttonLabel(VK_SERVICES).waitUntil(displayed()).click();

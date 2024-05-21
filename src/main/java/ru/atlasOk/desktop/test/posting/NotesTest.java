@@ -5,7 +5,12 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.atlasOk.desktop.test.baseInstances.BaseTestWithLogin;
 
-import static ru.atlasOk.consts.Consts.*;
+import static ru.atlasOk.consts.Consts.BASE_URL;
+import static ru.atlasOk.consts.Consts.PROFILE_URL;
+import static ru.atlasOk.consts.Consts.ID_URL;
+import static ru.atlasOk.consts.Consts.STATUSES_URL;
+import static ru.atlasOk.consts.Consts.USERNAME;
+
 import static ru.atlasOk.desktop.pages.NotesPage.EMPTY_POSTS_TEXT;
 import static ru.yandex.qatools.matchers.webdriver.DisplayedMatcher.displayed;
 import static ru.yandex.qatools.matchers.webdriver.TextMatcher.text;

@@ -14,10 +14,6 @@ public interface UserPage extends WebPage {
     @FindBy(".//*[@aria-label='Отменить запрос']")
     AtlasWebElement removeFriendRequestConfirmButton();
 
-    @Name("Notes")
-    @FindBy(".//*[@data-l='t,userStatuses']")
-    AtlasWebElement notes();
-
     @Name("Self infromation section")
     @FindBy("//div[@id='hook_Block_AboutUserRB']")
     SelfInfoSection selfInfo();

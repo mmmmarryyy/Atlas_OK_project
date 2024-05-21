@@ -9,7 +9,7 @@ import static ru.atlasOk.consts.Consts.PROFILE_URL;
 import static ru.atlasOk.consts.Consts.ID_URL;
 import static ru.yandex.qatools.matchers.webdriver.TextMatcher.text;
 
-@DisplayName("User page info")
+@DisplayName("User info")
 public class BirthInfoTest extends BaseTestWithLogin {
 
     @DisplayName("Birth info")

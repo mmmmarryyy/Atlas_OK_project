@@ -21,6 +21,7 @@ public class BaseTestWithLogin {
         driver = new ChromeDriver();
         Atlas atlas = new Atlas(new WebDriverConfiguration(driver, BASE_URL));
         site = atlas.create(driver, BaseSite.class);
+
         site.onLoginPage().open();
         site.onLoginPage().usernameField().waitUntil(displayed()).sendKeys(USERNAME);
         site.onLoginPage().passwordField().waitUntil(displayed()).sendKeys(PASSWORD);
